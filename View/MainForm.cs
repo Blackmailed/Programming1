@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace Programming
 {
@@ -17,7 +18,7 @@ namespace Programming
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -58,13 +59,51 @@ namespace Programming
         private void ValuesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var item = ValuesListBox.SelectedItem;
-            IntBox1.Text = ((int)item).ToString();
+            textBox1.Text = ((int)item).ToString();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
-    }
 
+        private void Parse_Button_Click(object sender, EventArgs e)
+        {
+            Weekday day;
+            if (Enum.TryParse(WeekDayTextBox.Text, out day))
+            {
+                output.Text = $"Это день недели ({day.ToString()} = {(int)day + 1}).";
+            }
+            else
+            {
+                output.Text = "Нет такого дня недели";
+            }
+
+        }
+
+        private void WeekDayTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var item = (Seasons)ComboSeasons.SelectedItem;
+            switch (item)
+            {
+                case Seasons.Autumn:
+                    BackColor = ColorTranslator.FromHtml("#e29c45");
+                    break;
+                case Seasons.Spring:
+                    BackColor = ColorTranslator.FromHtml("#559c45");
+                    break;
+                case Seasons.Summer:
+                    MessageBox.Show("Ура! Солнце!", "AlErT", MessageBoxButtons.OKCancel);
+                    break;
+                case Seasons.Winter:
+                    MessageBox.Show("«Бррр! Холодно!", "AlErT", MessageBoxButtons.OKCancel);
+                    break;
+            }
+        }
+    }
 }
