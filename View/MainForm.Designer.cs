@@ -41,7 +41,7 @@ namespace Programming
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.IntTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -173,7 +173,7 @@ namespace Programming
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.IntTextBox);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label1);
@@ -186,13 +186,13 @@ namespace Programming
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Enumerations";
             // 
-            // textBox1
+            // IntTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(431, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 23);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.IntTextBox.Location = new System.Drawing.Point(431, 49);
+            this.IntTextBox.Name = "IntTextBox";
+            this.IntTextBox.Size = new System.Drawing.Size(147, 23);
+            this.IntTextBox.TabIndex = 2;
+            this.IntTextBox.TextChanged += new System.EventHandler(this.IntTextBox_TextChanged);
             // 
             // label3
             // 
@@ -277,7 +277,7 @@ namespace Programming
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Parse_Button;
         private System.Windows.Forms.TextBox WeekDayTextBox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox IntTextBox;
         private System.Windows.Forms.RichTextBox output;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox ComboSeasons;

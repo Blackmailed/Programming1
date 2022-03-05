@@ -59,10 +59,11 @@ namespace Programming
         private void ValuesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var item = ValuesListBox.SelectedItem;
-            textBox1.Text = ((int)item).ToString();
+            IntTextBox.Text = ((int)item).ToString();
+
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void IntTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
