@@ -43,6 +43,8 @@ namespace Programming
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.ValuesListBox = new System.Windows.Forms.ListBox();
             this.EnumsListBox = new System.Windows.Forms.ListBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +61,8 @@ namespace Programming
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.ComboSeasons);
             this.tabPage1.Controls.Add(this.output);
@@ -193,6 +197,24 @@ namespace Programming
             this.EnumsListBox.TabIndex = 0;
             this.EnumsListBox.SelectedIndexChanged += new System.EventHandler(this.EnumsListBox_SelectedIndexChanged);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(27, 308);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(125, 15);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Type value for parsing:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(438, 308);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 15);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Choose season:";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -226,6 +248,8 @@ namespace Programming
         private System.Windows.Forms.RichTextBox output;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox ComboSeasons;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
     }
 }
 

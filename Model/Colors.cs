@@ -1,5 +1,4 @@
 ﻿namespace Programming
-
 {
     public enum Colors
     {
