@@ -31,22 +31,22 @@ namespace Programming
             switch (itemType)
             {
                 case Enums.Colors:
-                    ValuesListBox.Items.AddRange(Enum.GetNames(typeof(Colors)));
+                    ValuesListBox.Items.AddRange(Enum.GetValues(typeof(Colors)));
                     break;
                 case Enums.Form_of_study:
-                    ValuesListBox.Items.AddRange(Enum.GetNames(typeof(Form_of_study)));
+                    ValuesListBox.Items.AddRange(Enum.GetValues(typeof(Form_of_study)));
                     break;
                 case Enums.Genre:
-                    ValuesListBox.Items.AddRange(Enum.GetNames(typeof(Genre)));
+                    ValuesListBox.Items.AddRange(Enum.GetValues(typeof(Genre)));
                     break;
                 case Enums.Seasons:
-                    ValuesListBox.Items.AddRange(Enum.GetNames(typeof(Seasons)));
+                    ValuesListBox.Items.AddRange(Enum.GetValues(typeof(Seasons)));
                     break;
                 case Enums.Smartphone_vendors:
-                    ValuesListBox.Items.AddRange(Enum.GetNames(typeof(Smartphone_vendors)));
+                    ValuesListBox.Items.AddRange(Enum.GetValues(typeof(Smartphone_vendors)));
                     break;
                 case Enums.Weekday:
-                    ValuesListBox.Items.AddRange(Enum.GetNames(typeof(Weekday)));
+                    ValuesListBox.Items.AddRange(Enum.GetValues(typeof(Weekday)));
                     break;
             }
         }
