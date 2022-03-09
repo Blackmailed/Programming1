@@ -1,10 +1,10 @@
 ﻿namespace Programming
 
 {
-    public enum Form_of_study
+    public enum Study
     {
-        Full_Time,
-        Correspondence,
+        FullTime,
+        Extramural,
         Evening,
         Distance
     }

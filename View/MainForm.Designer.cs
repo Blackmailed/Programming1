@@ -1,4 +1,6 @@
 ﻿
+using System.Windows.Forms;
+
 namespace Programming
 {
     partial class MainForm
@@ -31,14 +33,14 @@ namespace Programming
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.ComboSeasons = new System.Windows.Forms.ComboBox();
-            this.output = new System.Windows.Forms.RichTextBox();
             this.Parse_Button = new System.Windows.Forms.Button();
             this.WeekDayTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.ComboSeasons = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Output = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.IntTextBox = new System.Windows.Forms.TextBox();
@@ -66,9 +68,6 @@ namespace Programming
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.ComboSeasons);
-            this.tabPage1.Controls.Add(this.output);
             this.tabPage1.Controls.Add(this.Parse_Button);
             this.tabPage1.Controls.Add(this.WeekDayTextBox);
             this.tabPage1.Controls.Add(this.groupBox1);
@@ -81,39 +80,6 @@ namespace Programming
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Enums";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(619, 332);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "GO!";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // ComboSeasons
-            // 
-            this.ComboSeasons.FormattingEnabled = true;
-            this.ComboSeasons.Items.AddRange(new object[] {
-            "Summer",
-            "Autumn",
-            "Winter",
-            "Spring"});
-            this.ComboSeasons.Location = new System.Drawing.Point(437, 333);
-            this.ComboSeasons.Name = "ComboSeasons";
-            this.ComboSeasons.Size = new System.Drawing.Size(176, 23);
-            this.ComboSeasons.TabIndex = 11;
-            // 
-            // output
-            // 
-            this.output.Location = new System.Drawing.Point(26, 360);
-            this.output.Name = "output";
-            this.output.Size = new System.Drawing.Size(277, 23);
-            this.output.TabIndex = 10;
-            this.output.Text = "";
-            this.output.TextChanged += new System.EventHandler(this.output_TextChanged);
             // 
             // Parse_Button
             // 
@@ -131,11 +97,12 @@ namespace Programming
             this.WeekDayTextBox.Name = "WeekDayTextBox";
             this.WeekDayTextBox.Size = new System.Drawing.Size(211, 23);
             this.WeekDayTextBox.TabIndex = 8;
-            this.WeekDayTextBox.TextChanged += new System.EventHandler(this.WeekDayTextBox_TextChanged);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.ComboSeasons);
             this.groupBox1.Location = new System.Drawing.Point(385, 279);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(401, 134);
@@ -143,17 +110,41 @@ namespace Programming
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Season Handle";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(200, 53);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(64, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "GO!";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(52, 36);
+            this.label6.Location = new System.Drawing.Point(18, 34);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 15);
             this.label6.TabIndex = 14;
             this.label6.Text = "Choose season:";
             // 
+            // ComboSeasons
+            // 
+            this.ComboSeasons.FormattingEnabled = true;
+            this.ComboSeasons.Items.AddRange(new object[] {
+            "Summer",
+            "Autumn",
+            "Winter",
+            "Spring"});
+            this.ComboSeasons.Location = new System.Drawing.Point(18, 53);
+            this.ComboSeasons.Name = "ComboSeasons";
+            this.ComboSeasons.Size = new System.Drawing.Size(176, 23);
+            this.ComboSeasons.TabIndex = 11;
+            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.Output);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(6, 279);
             this.groupBox2.Name = "groupBox2";
@@ -161,6 +152,15 @@ namespace Programming
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Weekday Parsing";
+            // 
+            // Output
+            // 
+            this.Output.AutoSize = true;
+            this.Output.Location = new System.Drawing.Point(31, 89);
+            this.Output.Name = "Output";
+            this.Output.Size = new System.Drawing.Size(45, 15);
+            this.Output.TabIndex = 14;
+            this.Output.Text = "Output";
             // 
             // label5
             // 
@@ -192,7 +192,6 @@ namespace Programming
             this.IntTextBox.Name = "IntTextBox";
             this.IntTextBox.Size = new System.Drawing.Size(147, 23);
             this.IntTextBox.TabIndex = 2;
-            this.IntTextBox.TextChanged += new System.EventHandler(this.IntTextBox_TextChanged);
             // 
             // label3
             // 
@@ -202,7 +201,6 @@ namespace Programming
             this.label3.Size = new System.Drawing.Size(55, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "Int value:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -278,7 +276,6 @@ namespace Programming
         private System.Windows.Forms.Button Parse_Button;
         private System.Windows.Forms.TextBox WeekDayTextBox;
         private System.Windows.Forms.TextBox IntTextBox;
-        private System.Windows.Forms.RichTextBox output;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox ComboSeasons;
         private System.Windows.Forms.Label label6;
@@ -286,6 +283,9 @@ namespace Programming
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label Output;
+
+        public TextBox IntBox11 { get => IntBox1; set => IntBox1 = value; }
     }
 }
 

@@ -3,7 +3,7 @@
     public enum Colors
     {
         Red,
-        Greem,
+        Green,
         Blue,
         Gray,
         Yellow
