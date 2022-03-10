@@ -128,6 +128,7 @@ namespace Programming
             this.label6.Size = new System.Drawing.Size(89, 15);
             this.label6.TabIndex = 14;
             this.label6.Text = "Choose season:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // ComboSeasons
             // 
@@ -141,6 +142,7 @@ namespace Programming
             this.ComboSeasons.Name = "ComboSeasons";
             this.ComboSeasons.Size = new System.Drawing.Size(176, 23);
             this.ComboSeasons.TabIndex = 11;
+            this.ComboSeasons.SelectedIndexChanged += new System.EventHandler(this.ComboSeasons_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -249,7 +251,6 @@ namespace Programming
             this.Name = "MainForm";
             this.ShowIcon = false;
             this.Text = "Programming Demo";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

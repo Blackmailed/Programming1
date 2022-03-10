@@ -9,6 +9,7 @@ namespace Programming
         public MainForm()
         {
             InitializeComponent();
+
             foreach (Enum valueEnums in Enum.GetValues(typeof(Enums)))
             {
                 EnumsListBox.Items.Add(valueEnums);
@@ -16,11 +17,7 @@ namespace Programming
             EnumsListBox.SelectedIndex = 0;
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-
-        }
+ 
 
         private void EnumsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -93,6 +90,16 @@ namespace Programming
                     MessageBox.Show("«Бррр! Холодно!", "AlErT", MessageBoxButtons.OKCancel);
                     break;
             }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComboSeasons_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
